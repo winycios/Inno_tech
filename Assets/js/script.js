@@ -1,10 +1,23 @@
 const header = document.querySelector("header");
 const button = document.querySelector(".scroll-btn i");
+const spo_button = document.querySelector(".scroll-spo i");
+const spo = document.querySelector("#spotify");
 
 window.addEventListener("scroll", function () {
     header.classList.toggle("sticky", window.scrollY > 200)
+    spo_button.classList.toggle("fixed", window.scrollY > 200)
     button.classList.toggle("fixed", window.scrollY > 200)
 });
+
+spo_button.addEventListener("click", function (evt) {
+
+    spo.style.display = "block";
+    spo_button.style.display = "none";
+    button.style.display = "none";
+
+    evt.preventDefault();
+
+})
 
 /* side bar*/
 let menu = document.querySelector("#menu");
@@ -33,8 +46,8 @@ const sr = ScrollReveal({
 sr.reveal('.home-text', { origin: 'top' });
 sr.reveal('.about-img, .service-item, .about-text', { origin: 'bottom' });
 sr.reveal('.about-img h2, .text-center, .right-contact h2', { origin: 'top' });
-sr.reveal('.left-contact', { origin: 'left' });
-sr.reveal('.right-contact', { origin: 'right' });
+sr.reveal('.left-contact', { origin: 'top' });
+sr.reveal('.right-contact', { origin: 'bottom' });
 sr.reveal('.end-section', { origin: 'bottom' });
 
 

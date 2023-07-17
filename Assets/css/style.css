@@ -481,6 +481,31 @@ span {
     border: 2px solid var(--main);
 }
 
+.scroll-spo i {
+
+    position: none;
+    left: 2.2rem;
+    bottom: 2.2rem;
+    color: var(--text);
+    background: #06b242;
+    font-size: 23px;
+    padding: 9px;
+    border-radius: 0.8rem;
+    transition: all ease .50s;
+}
+
+.scroll-spo i.fixed {
+
+    position: fixed;
+}
+
+.scroll-spo i:hover{
+
+    transform: translateY(-6px);
+    background: transparent;
+    border: 2px solid #06b242;
+}
+
 /* media */
 
 @media (max-width: 1600px) {
