@@ -9,7 +9,7 @@
     --bg-color: #191919;
     --secondary-bg: #101010;
     --main: #ff5757;
-    --text: #fff;
+    --text: #000000;
     --second-color: #e4e4e4;
     --other-color: #c6c9d8bf;
 
@@ -67,10 +67,13 @@ header {
     transition: all ease .50s;
 }
 
-.logo img {
+.logo {
 
-    width: 50%;
+    width: 100%;
     height: auto;
+    color: var(--main);
+    letter-spacing: 2px;
+    font-size: 2rem;
 }
 
 .navlist {
@@ -153,14 +156,13 @@ section {
     color: var(--text);
     font-size: var(--p-font);
     font-weight: 600;
-    border: 2px solid var(--main);
     transition: all ease .50s;
 }
 
 .btn:hover {
 
     transform: translateX(5px);
-    background: transparent;
+    background: transparent !important;
     border: 2px solid var(--main);
 }
 
@@ -169,6 +171,24 @@ section {
     white-space: nowrap;
     border-right: .2rem solid var(--main);
     animation: escrever 2s steps(40, end), piscar-cursor .75s step-end infinite;
+}
+
+/* personalização*/ 
+.personalization{
+
+    margin-left: 10px;
+    transition: 0.5s ease-in;
+}
+
+.personalization i{
+
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.personalization:hover{
+
+    color: var(--main);
 }
 
 @keyframes escrever {

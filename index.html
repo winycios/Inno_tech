@@ -7,6 +7,7 @@
     <title>INNO TECHNOLOGY</title>
 
     <link rel="stylesheet" href="./Assets/css/style.css">
+    <link rel="stylesheet" href="./Assets/css/personalizacao.css">
 
     <link rel="icon" href="./Assets/img/logo.ico" type="image/icon type">
 
@@ -22,7 +23,7 @@
     <!--header-->
 
     <header>
-        <a href="#" class="logo"><img src="./Assets/img/inno.png" alt="empresa"></a>
+        <a href="#" class="logo">INNOTECH</a>
         <i class='bx bx-list-ul' id="menu"></i>
 
         <ul class="navlist">
@@ -30,13 +31,11 @@
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#servico">Serviço</a></li>
             <li><a href="#contato">Contato</a></li>
+            <li class="personalization"><a href="#modal"><i class='bx bx-color'></i></a></li>
         </ul>
-
     </header>
 
-
     <!--inicio-->
-
     <section class="home" id="inicio">
         <div class="home-text">
             <h3>UX/UI design - Desevolvimento multiplataforma</h3>
@@ -170,13 +169,59 @@
 
     <!--spotify-->
     <div>
-        <iframe id="spotify" style="border-radius:12px; height: 20%; display: none; position:fixed; bottom: -30px; padding: 15px 35px;"
-        src="https://open.spotify.com/embed/playlist/37i9dQZF1EpeGQQZfuMyQW?utm_source=generator&theme=0" width="100%"
-        frameBorder="0" 
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe id="spotify"
+            style="border-radius:12px; height: 20%; display: none; position:fixed; bottom: -30px; padding: 15px 35px;"
+            src="https://open.spotify.com/embed/playlist/37i9dQZF1EpeGQQZfuMyQW?utm_source=generator&theme=0"
+            width="100%" frameBorder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <!-- modal-->
+    <div class="modal-wrapper" id="modal">
+        <div class="modal-body card">
+            <div class="modal-header">
+                <h2 class="heading">Personalização do site</h2>
+                <a href="#!" role="button" class="close" aria-label="close this modal">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+                    </svg>
+                </a>
+            </div>
+            <p>Cor secundária</p>
+            <div class="colors">
+                <div class="box_circle">
+                    <li class="circle color-1" style="background: #5a72b5;" onclick="back_color('#5a72b5')"></li>
+                    <li class="circle color-2" style="background: #ff5757;" onclick="back_color('#ff5757')"></li>
+                    <li class="circle color-3" style="background: #10b573bf;" onclick="back_color('#10b573bf')"></li>
+                    <li class="circle color-4" style="background: #b5108fbf;" onclick="back_color('#b5108fbf')"></li>
+                    <li class="circle color-5" style="background: #b5b210bf;" onclick="back_color('#b5b210bf')"></li>
+                </div>
+            </div>
+            <p>Tamanho das palavras</p>
+            <div class="colors">
+                <div class="box_circle">
+                    <li class="circle" style="background: #5a72b5;" onclick="back_color('#5a72b5')"></li>
+                    <li class="circle" style="background: #ff5757;" onclick="back_color('#ff5757')"></li>
+                    <li class="circle" style="background: #10b573bf;" onclick="back_color('#10b573bf')"></li>
+                    <li class="circle" style="background: #b5108fbf;" onclick="back_color('#b5108fbf')"></li>
+                    <li class="circle" style="background: #109cb5bf;" onclick="back_color('#109cb5bf')"></li>
+                </div>
+            </div>
+            <p>Cor de fundo</p>
+            <div class="colors">
+                <li class="cube" style="background: #191919;" onclick="background('#191919')">O PRETO</li>
+                <li class="cube" style="background: linear-gradient(to right, #868f96 0%, #909da2 100%);"
+                    onclick="background('linear-gradient(to right, #868f96 0%, #909da2 100%)')">O CINZA</li>
+                <li class="cube" style="background: linear-gradient(to top, #09203f 0%, #537895 100%);"
+                    onclick="background('linear-gradient(to top, #09203f 0%, #537895 100%)')">O AZUL</li>
+            </div>
+        </div>
+        <a href="#!" class="outside-trigger"></a>
     </div>
 
     <script src="./Assets/js/script.js"></script>
+    <script src="./Assets/js/personalizacao.js"></script>
 </body>
 
 </html>
